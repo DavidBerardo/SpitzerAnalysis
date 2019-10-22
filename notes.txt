@@ -1,0 +1,45 @@
+Take fits files:
+	Median filter the data points
+	Background Subtraction (save background values)
+	Save new fits files, never do this again
+	Calculate centroids, save them in a file, never calculate again
+
+From cleaned up fits files:
+	get 3x3, 5x5 etc pld files of normalized flux
+	Try also, median stack all the frames, take pixels that contain 90% of the flux (or some other value)
+	Save this data, never calculate it again
+
+Now, calculate flux with varius apertures from clean fits files
+
+Files that exist now:
+	cleaned up fits files
+	backgrounds
+	centroids
+	pld pixel data
+	flux as a function of aperture
+
+
+
+
+Pre-Process:
+	Median Filter
+	Calculate and subtract background (using annulus, and corner)
+	Calculate centroids (save as individual file, two columns one for 2dgauss one for CoL)
+	Save one big file:
+		Columns: background, 2dGauss centroid, CoL centroid
+	save filtered and subtracted images as new file (fits or just )
+
+	Also, save median stacked image, mean stacked image
+
+
+Some things to output:
+	t0, start time of observation (in BJD?, whatever it is in the fits file)
+	% of points median filtered
+	List of frames where 2dgaussian fit was bad
+	
+
+
+
+
+
+Getting flux will be different stuff (since I might want to go back and try different things)
